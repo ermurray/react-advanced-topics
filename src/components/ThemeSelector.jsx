@@ -1,8 +1,7 @@
-import { useContext } from "react"
-import { ThemeContext } from "../context/theme-context"
 
 
-export const ThemeSelector =  ({changeTheme}) => {
+const ThemeSelector =  ({changeTheme}) => {
+
   return (
     <div>
       <button
@@ -20,3 +19,5 @@ export const ThemeSelector =  ({changeTheme}) => {
     </div>
   )
 }
+
+export default ThemeSelector;

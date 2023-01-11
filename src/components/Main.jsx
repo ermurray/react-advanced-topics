@@ -1,6 +1,6 @@
 import { DisplayTheme } from './DisplayTheme';
 import logo from '../logo.svg';
-import { ThemeSelector } from './ThemeSelector';
+import ThemeSelector from './ThemeSelector';
 
 export default function Main({ changeTheme, theme }) {
   return (

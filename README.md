@@ -1,4 +1,5 @@
 # React Advanced Topics
+this is the base repo to start lecture checkout your cohorts branch to see work from lecture.
 
 ## topics / goals
 - [ ] react context and dynamically setting context.

@@ -15,10 +15,15 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Main changeTheme={changeThemeHandler}/>
+        <Main
+        changeTheme={changeThemeHandler}
+        theme={theme}
+        />
       </Layout>
   </div>
   );
 }
 
 export default App;
+
+

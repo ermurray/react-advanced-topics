@@ -13,6 +13,51 @@
   }
 }
 
+
+
+.rainbow {
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
+@-moz-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
+@-o-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
+@keyframes rainbow { 
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
+.dark {
+  background: #282c34;
+}
+
+.light {
+  background: blanchedalmond;
+  color: black;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,6 +67,21 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.lightButton {
+  background-color: whitesmoke;
+  border-radius: 4rem;
+  color: black;
+}
+.darkButton {
+  background-color: black;
+  border-radius: 4rem;
+  color: aliceblue;
+}
+.rainbowButton {
+  background-color: aquamarine;
+  border-radius: 4rem;
+  color: fuchsia;
 }
 
 .App-link {

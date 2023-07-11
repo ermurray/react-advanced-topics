@@ -1,8 +1,10 @@
 import { DisplayTheme } from './DisplayTheme';
 import logo from '../logo.svg';
 import ThemeSelector from './ThemeSelector';
+import { NavLink } from 'react-router-dom';
 
-export default function Main({ changeTheme, theme }) {
+export default function Main() {
+
   return (
 
         <header className="App-header">
@@ -18,12 +20,10 @@ export default function Main({ changeTheme, theme }) {
           >
             Learn React
           </a>
-          <DisplayTheme
-            theme={theme}
-          />
-          <ThemeSelector
-            changeTheme={changeTheme}
-          />
+          <DisplayTheme />
+          <ThemeSelector />
+          <NavLink to='/about'> ABOUT</NavLink>
+          <NavLink to='/counter'> COUNTER </NavLink>
         </header> 
   );
 }

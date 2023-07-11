@@ -1,25 +1,29 @@
-import { useState } from 'react';
 import Layout from './components/Layout';
 import Main from './components/Main';
 import './App.css';
+import { ThemeContextProvider } from './context/themeContext';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './components/About';
+import Counter from './components/Counter';
 
-const defaultTheme = {
-  theme: 'light',
-  somethingElse: [],
-}
+
 
 function App() {
-  const [theme, setTheme] = useState(defaultTheme.theme);
-  const changeThemeHandler = theme => setTheme(theme);  
+ 
 
   return (
     <div className="App">
-      <Layout>
-        <Main
-        changeTheme={changeThemeHandler}
-        theme={theme}
-        />
-      </Layout>
+      <ThemeContextProvider>
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path='about' element={<About/>}/>
+              <Route path='/' element={<Main />} />
+              <Route path='counter' element={<Counter />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </ThemeContextProvider>
   </div>
   );
 }

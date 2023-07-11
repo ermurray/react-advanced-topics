@@ -1,20 +1,23 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/themeContext";
 
 
-const ThemeSelector =  ({changeTheme}) => {
+const ThemeSelector =  () => {
+  const { changeThemeHandler } = useContext(ThemeContext);
 
   return (
     <div>
       <button
         className="lightButton"
-        onClick={() => changeTheme('light')}
+        onClick={() => changeThemeHandler('light')}
       > Make It Light </button>
       <button
         className="darkButton"
-        onClick={() => changeTheme('dark')}
+        onClick={() => changeThemeHandler('dark')}
       > Make It Dark </button>
       <button
         className= "rainbowButton"
-        onClick={() => changeTheme('rainbow')}
+        onClick={() => changeThemeHandler('rainbow')}
       >I Like Rainbows</button>
     </div>
   )

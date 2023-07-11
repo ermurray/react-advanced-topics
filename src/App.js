@@ -1,25 +1,30 @@
 import { useState } from 'react';
+import { ThemeContextProvider } from './context/themeContext';
 import Layout from './components/Layout';
 import Main from './components/Main';
 import './App.css';
+import HeaderState from './components/HeaderState';
 
-const defaultTheme = {
-  theme: 'light',
-  somethingElse: [],
-}
+// const defaultTheme = {
+//   theme: 'light',
+//   somethingElse: [],
+// }
 
 function App() {
-  const [theme, setTheme] = useState(defaultTheme.theme);
-  const changeThemeHandler = theme => setTheme(theme);  
+  const [state, setState] = useState('this is some state');
 
   return (
     <div className="App">
-      <Layout>
-        <Main
-        changeTheme={changeThemeHandler}
-        theme={theme}
-        />
-      </Layout>
+      <ThemeContextProvider>
+        <Layout
+          headerComponent={<HeaderState headerText={state} />}
+        >
+          <Main
+          // changeTheme={changeThemeHandler}
+          // theme={theme}
+          />
+        </Layout>  
+      </ThemeContextProvider>
   </div>
   );
 }
